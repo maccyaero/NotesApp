@@ -15,8 +15,12 @@ function CreateArea(props){
     
 }
 function submitEvent(event){
-    event.preventDefault(); //This function stops the page from reloading when button is clicked. 
     props.onAdd(note);
+    setNote({
+        title : "",
+        content : ""
+    });
+    event.preventDefault(); //This function stops the page from reloading when button is clicked. 
 }
 return <div>
     <form>
