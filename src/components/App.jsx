@@ -9,9 +9,12 @@ import CreateArea from "./CreateArea";
 
 
 function App (){
+    function addNote(note){
+        console.log(note);
+    }
     return (<div>
 <Header />
-<CreateArea />
+<CreateArea onAdd={addNote} />
 
 {notes.map(note => <Notes title = {note.title} content = {note.content} key = {note.key}/>)}
 <Footer />
